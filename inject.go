@@ -496,14 +496,6 @@ func (g *Graph) populateUnnamedInterface(o *Object) error {
 			}
 		}
 
-		// If we didn't find an assignable value, we're missing something.
-		if found == nil {
-			return fmt.Errorf(
-				"found no assignable value for field %s in type %s",
-				o.reflectType.Elem().Field(i).Name,
-				o.reflectType,
-			)
-		}
 	}
 	return nil
 }
